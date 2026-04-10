@@ -39,7 +39,8 @@ Se asignó una IP estática para la administración del servidor.
 * **IP:** `192.168.1.100`
 * **Hostname:** `hyperoot-server`
 
-**[AQUÍ VA TU CAPTURA DEL RESUMEN FINAL DE INSTALACIÓN - Imagen 1000384104.jpg]**
+<img width="1600" height="943" alt="image" src="https://github.com/user-attachments/assets/4f6f5f62-b78e-4992-b00c-d82b5372e020" />
+
 
 ---
 
@@ -47,7 +48,8 @@ Se asignó una IP estática para la administración del servidor.
 
 Una vez completada la instalación, se accedió a la interfaz web de administración (`https://192.168.1.100:8006`). Los siguientes pasos se realizaron a través de la **Shell** del nodo.
 
-**[AQUÍ VA TU CAPTURA DEL DASHBOARD DE PROXMOX RECIÉN INSTALADO - Imagen 224975b9.jpg]**
+<img width="1360" height="643" alt="image" src="https://github.com/user-attachments/assets/c880d60a-37e3-4f98-af0b-e969efd4400d" />
+
 
 ### 2.1 Corrección de Repositorios (No-Subscription)
 Por defecto, Proxmox intenta conectar a los repositorios de pago ("Enterprise"), lo que genera errores `401 Unauthorized` al intentar actualizar.
