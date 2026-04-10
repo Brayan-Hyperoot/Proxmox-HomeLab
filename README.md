@@ -79,7 +79,7 @@ Se aplicaron los cambios reiniciando el servicio:
 
 systemctl restart systemd-logind
 
-systemctl restart systemd-logind
+
 🌐 3. Fase de Virtualización de Networking (MikroTik CHR)
 ​Para gestionar la red del laboratorio y segmentar el tráfico, se desplegó un router virtualizado MikroTik Cloud Hosted Router (CHR).
 ​3.1 Preparación de la Imagen
