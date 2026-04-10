@@ -1,3 +1,17 @@
+# 💻 Hyperoot Home-Lab
+> *Proyecto de virtualización de alto rendimiento sobre hardware ASUS reciclado.*
+
+![GitHub Repo Size](https://img.shields.io/github/repo-size/Brayan-Hyperoot/Proxmox-HomeLab?style=flat-square)
+![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=flat-square)
+
+---
+
+## 🛠️ Stack Tecnológico
+- *Hypervisor:* Proxmox VE 8.x
+- *Network OS:* MikroTik RouterOS v7 (CHR)
+- *Base OS:* Debian 12 (Bookworm)
+-
+
 # Proxmox-HomeLab
 Despliegue de infraestructura virtualizada sobre hardware limitado con Proxmox y Networking avanzado
 # 🚀 Proyecto Hyperoot: Home-Lab de Microservicios y Networking Avanzado
