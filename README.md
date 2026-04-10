@@ -79,6 +79,8 @@ Se aplicaron los cambios reiniciando el servicio:
 
 systemctl restart systemd-logind
 
+---
+
 
 🌐 3. Fase de Virtualización de Networking (MikroTik CHR)
 ​Para gestionar la red del laboratorio y segmentar el tráfico, se desplegó un router virtualizado MikroTik Cloud Hosted Router (CHR).
@@ -95,6 +97,7 @@ unzip chr.zip
 
 ### 3.2 Creación de la VM e Importación del Disco
 ​Se creó una Máquina Virtual (VM ID 100) desde la interfaz web sin disco duro. Luego, se importó la imagen descargada directamente al almacenamiento local de Proxmox:
+
 
 # Importar el disco a la VM 100
 qm importdisk 100 chr-7.12.1.img local-lvm
@@ -119,4 +122,7 @@ Solución: Uso de curl con el parámetro -H "User-Agent: Mozilla/5.0" para simul
 ​Conexión vía Winbox: Configurar IP de gestión en MikroTik para acceso desde el Lenovo.
 ​Integración de Almacenamiento: Montar el disco de 2TB para datos.
 ​Despliegue de Docker: Crear una VM para contenedores (Nginx Proxy Manager, Nextcloud).
+
+``
+
 
