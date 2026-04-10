@@ -82,7 +82,7 @@ systemctl restart systemd-logind
 
 🌐 3. Fase de Virtualización de Networking (MikroTik CHR)
 ​Para gestionar la red del laboratorio y segmentar el tráfico, se desplegó un router virtualizado MikroTik Cloud Hosted Router (CHR).
-​3.1 Preparación de la Imagen
+​### 3.1 Preparación de la Imagen
 ​Dado que los servidores de MikroTik pueden bloquear descargas directas (wget) desde terminales, se utilizó curl simulando un navegador para descargar la imagen del disco:
 # Instalar unzip
 apt install unzip -y
@@ -101,15 +101,16 @@ qm importdisk 100 chr-7.12.1.img local-lvm
 
 📢 4. Troubleshooting (Resolución de Problemas Clave)
 ​Esta sección documenta los desafíos técnicos encontrados y sus soluciones, demostrando capacidad de análisis y corrección.
-​# Error 1: KVM host doesn't support requested feature (CPUID)
+​### Error 1: KVM host doesn't support requested feature (CPUID)
 ​Situación: Al intentar iniciar la VM de MikroTik, el arranque fallaba con un error relacionado con características del CPU no soportadas.
-​<img width="1079" height="1269" alt="image" src="https://github.com/user-attachments/assets/471cd5c2-522b-41e2-9e65-d08f86d4636a" />
+​
+<img width="1079" height="1269" alt="image" src="https://github.com/user-attachments/assets/b82c2035-2d8e-43bf-8732-76f1fe3a2202" />
 
 ​Solución: Se modificó el tipo de procesador emulado en la VM.
 ​Ir a VM 100 -> Hardware -> Processors.
 ​Cambiar Type de kvm64 o x86-64-v2-AES a host.
 ​Explicación: Esto permite que la VM utilice directamente las instrucciones del procesador físico del ASUS, resolviendo la incompatibilidad de emulación.
-​# Error 2: Bloqueo de Descarga de MikroTik (HTTP Error 501/403)
+​### Error 2: Bloqueo de Descarga de MikroTik (HTTP Error 501/403)
 ​Situación: El comando wget fallaba al intentar descargar la ISO desde el servidor oficial.
 Solución: Uso de curl con el parámetro -H "User-Agent: Mozilla/5.0" para simular una petición de navegador estándar.
 ​📈 5. Estado Actual y Próximos Pasos
